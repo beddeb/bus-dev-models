@@ -49,31 +49,53 @@ graph TD
     CLIENT_ATTR1(("ФИО"))
     CLIENT_ATTR2(("Пол"))
     CLIENT_ATTR3(("Дата рождения"))
-    CLIENT_ATTR4(("Контактный телефон"))
+    CLIENT_ATTR4(("E-почта"))
+    CLIENT_ATTR5(("Контактный телефон"))
+
     CLIENT --- CLIENT_ATTR1
     CLIENT --- CLIENT_ATTR2
     CLIENT --- CLIENT_ATTR3
     CLIENT --- CLIENT_ATTR4
+    CLIENT --- CLIENT_ATTR5
     
     %% АТРИБУТЫ ЗАЯВКИ (в кружочках)
-    APPLICATION_ATTR1(("Дата подачи"))
-    APPLICATION_ATTR2(("Статус рассмотрения"))
+    APPLICATION_ATTR1(("Номер"))
+    APPLICATION_ATTR2(("Дата подачи"))
+    APPLICATION_ATTR3(("Дата заключения"))
+    APPLICATION_ATTR4(("Статус рассмотрения"))
+
     APPLICATION --- APPLICATION_ATTR1
     APPLICATION --- APPLICATION_ATTR2
+    APPLICATION --- APPLICATION_ATTR3
+    APPLICATION --- APPLICATION_ATTR4
     
     %% АТРИБУТЫ ДОКУМЕНТОВ (в кружочках)
     DOCUMENT_ATTR1(("Тип документа"))
     DOCUMENT_ATTR2(("Серия и номер"))
     DOCUMENT_ATTR3(("Дата выдачи"))
+    DOCUMENT_ATTR4(("Срок действия"))
+    DOCUMENT_ATTR5(("КемВыдан"))
+
     DOCUMENT --- DOCUMENT_ATTR1
     DOCUMENT --- DOCUMENT_ATTR2
     DOCUMENT --- DOCUMENT_ATTR3
+    DOCUMENT --- DOCUMENT_ATTR4
+    DOCUMENT --- DOCUMENT_ATTR5
     
     %% АТРИБУТЫ СОТРУДНИКА (в кружочках)
     OFFICER_ATTR1(("ФИО сотрудника"))
-    OFFICER_ATTR2(("Должность"))
+    OFFICER_ATTR2(("Отдел"))
+    OFFICER_ATTR3(("Должность"))
+    OFFICER_ATTR4(("E-почта"))
+    OFFICER_ATTR5(("Контактный телефон"))
+    OFFICER_ATTR6(("Статус активности"))
+
     OFFICER --- OFFICER_ATTR1
     OFFICER --- OFFICER_ATTR2
+    OFFICER --- OFFICER_ATTR3
+    OFFICER --- OFFICER_ATTR4
+    OFFICER --- OFFICER_ATTR5
+    OFFICER --- OFFICER_ATTR6
     
     %% АТРИБУТЫ ДОГОВОРА (в кружочках)
     CONTRACT_ATTR1(("Номер договора"))
@@ -81,21 +103,31 @@ graph TD
     CONTRACT_ATTR3(("Содержание"))
     CONTRACT_ATTR4(("Подпись"))
     CONTRACT_ATTR5(("Дата подписания"))
+    CONTRACT_ATTR6(("Срок"))
+
     CONTRACT --- CONTRACT_ATTR1
     CONTRACT --- CONTRACT_ATTR2
     CONTRACT --- CONTRACT_ATTR3
     CONTRACT --- CONTRACT_ATTR4
     CONTRACT --- CONTRACT_ATTR5
+    CONTRACT --- CONTRACT_ATTR6
     
     %% АТРИБУТЫ СЧЕТА (в кружочках)
     ACCOUNT_ATTR1(("Номер счета"))
     ACCOUNT_ATTR2(("Тип счета"))
     ACCOUNT_ATTR3(("Валюта"))
     ACCOUNT_ATTR4(("Текущий баланс"))
+    ACCOUNT_ATTR5(("Статус"))
+    ACCOUNT_ATTR6(("Дата открытия"))
+    ACCOUNT_ATTR7(("Дата закрытия"))
+
     ACCOUNT --- ACCOUNT_ATTR1
     ACCOUNT --- ACCOUNT_ATTR2
     ACCOUNT --- ACCOUNT_ATTR3
     ACCOUNT --- ACCOUNT_ATTR4
+    ACCOUNT --- ACCOUNT_ATTR5
+    ACCOUNT --- ACCOUNT_ATTR6
+    ACCOUNT --- ACCOUNT_ATTR7
     
     %% АТРИБУТЫ КАРТЫ (в кружочках)
     CARD_ATTR1(("Номер карты"))
